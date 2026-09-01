@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMES Reborn | Atomic Design Guide</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">GAMES REBORN</div>
+      <div class="nav-group">
+        <div class="nav-heading">Foundations</div>
+        <a href="#tokens" class="nav-link">Design Tokens</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-heading">Atomic Hierarchy</div>
+        <a href="#atoms" class="nav-link">1. Atoms</a>
+        <a href="#molecules" class="nav-link">2. Molecules</a>
+        <a href="#organisms" class="nav-link">3. Organisms</a>
+        <a href="#templates" class="nav-link">4. Templates</a>
+        <a href="#pages" class="nav-link">5. Pages</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="header-badge">Design System v0.1</div>
+      <h1>Atomic Design Guide</h1>
+      <p class="lead">Universal design architecture and component reference for the GAMES Reborn Network ecosystem.</p>
+
+      <!-- Design Tokens -->
+      <section id="tokens" class="section">
+        <h2 class="section-title">Design Tokens (Core Foundations)</h2>
+        <p class="section-desc">Primitive color palettes, elevations, typography scales, and glow variables.</p>
+        <div class="component-card">
+          <div class="component-header">Color Palette & Surfaces</div>
+          <div class="component-preview">
+            <div style="width: 80px; height: 80px; background: #090d16; border: 1px solid #233054; border-radius: 8px; display: flex; align-items: flex-end; padding: 6px; font-size: 0.7rem;">Bg</div>
+            <div style="width: 80px; height: 80px; background: #131b2e; border: 1px solid #233054; border-radius: 8px; display: flex; align-items: flex-end; padding: 6px; font-size: 0.7rem;">Surface</div>
+            <div style="width: 80px; height: 80px; background: #3b82f6; border-radius: 8px; display: flex; align-items: flex-end; padding: 6px; font-size: 0.7rem;">Primary</div>
+            <div style="width: 80px; height: 80px; background: #06b6d4; border-radius: 8px; display: flex; align-items: flex-end; padding: 6px; font-size: 0.7rem;">Cyan</div>
+            <div style="width: 80px; height: 80px; background: #8b5cf6; border-radius: 8px; display: flex; align-items: flex-end; padding: 6px; font-size: 0.7rem;">Purple</div>
+            <div style="width: 80px; height: 80px; background: #10b981; border-radius: 8px; display: flex; align-items: flex-end; padding: 6px; font-size: 0.7rem;">Emerald</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Atoms -->
+      <section id="atoms" class="section">
+        <h2 class="section-title">1. Atoms</h2>
+        <p class="section-desc">Foundational UI elements: buttons, input fields, badges, icons, and avatars.</p>
+        
+        <div class="component-card">
+          <div class="component-header">Buttons</div>
+          <div class="component-preview">
+            <button class="btn btn-primary">Primary Action</button>
+            <button class="btn btn-secondary">Secondary Outline</button>
+            <button class="btn btn-glow-cyan">Cyber Glow</button>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-header">Inputs & Badges</div>
+          <div class="component-preview">
+            <input class="input-field" placeholder="Enter username or email..." />
+            <span class="badge badge-online">ONLINE</span>
+            <span class="badge badge-maintenance">MAINTENANCE</span>
+            <span class="badge badge-offline">OFFLINE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Molecules -->
+      <section id="molecules" class="section">
+        <h2 class="section-title">2. Molecules</h2>
+        <p class="section-desc">Combinations of atoms behaving as discrete functional units.</p>
+        
+        <div class="component-card">
+          <div class="component-header">Search Header & Stats Pill</div>
+          <div class="component-preview">
+            <div class="search-bar">
+              <input placeholder="Search servers, players, patches..." />
+              <button class="btn btn-primary" style="padding: 6px 14px;">Search</button>
+            </div>
+
+            <div class="stat-pill">
+              <span class="val">1,482</span>
+              <span class="lbl">Active Players</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organisms -->
+      <section id="organisms" class="section">
+        <h2 class="section-title">3. Organisms</h2>
+        <p class="section-desc">Complex UI compositions forming distinct sections of an interface.</p>
+
+        <div class="component-card">
+          <div class="component-header">Navigation Bar</div>
+          <div class="component-preview">
+            <div class="navbar-preview">
+              <div class="nav-brand">GAMES REBORN</div>
+              <ul class="nav-menu">
+                <li><a href="#">Portal</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Wiki</a></li>
+              </ul>
+              <button class="btn btn-primary" style="padding: 6px 16px;">Launcher</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-header">Server Status Card</div>
+          <div class="component-preview">
+            <div class="server-card">
+              <div class="server-card-header">
+                <span class="server-title">MU3 Global Realm</span>
+                <span class="badge badge-online">ACTIVE</span>
+              </div>
+              <div class="server-meta">
+                <span>Version: v1.4.2</span>
+                <span>Latency: 28ms</span>
+              </div>
+              <button class="btn btn-glow-cyan" style="width: 100%; justify-content: center;">Connect Server</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Templates -->
+      <section id="templates" class="section">
+        <h2 class="section-title">4. Templates & 5. Pages</h2>
+        <p class="section-desc">Full layouts and completed interfaces for Portal, Launcher, and Web Admin apps.</p>
+        <div class="component-card">
+          <div class="component-header">Layout Blueprints</div>
+          <div class="component-preview">
+            <p style="color: var(--color-text-muted);">Responsive grid blueprints and production application page templates are structured under <code>/src/templates</code> and <code>/src/pages</code>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
